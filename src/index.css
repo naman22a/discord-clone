@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidebarItem {
+	@apply bg-gray-700 text-secondary p-3 rounded-full mb-4 cursor-pointer transition-all hover:text-white hover:bg-secondary duration-300;
+	/* Todo:  hover:rounded-xl */
+}
+
+.tooltip{
+	@apply rounded-md shadow-md text-white bg-gray-900 text-xs font-bold
+	absolute top-1/3 left-16 px-4 py-2 transform scale-0;
+}
+
+.message-box-icon{
+	@apply h-6 w-6 hover:text-white cursor-pointer mx-2;
+}
+
+::-webkit-scrollbar {
+    background-color: #2f3136;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #202225;
+    width: 10px;
+    border-radius: 15px;
+}
