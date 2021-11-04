@@ -1,4 +1,5 @@
-import { Message } from "../../interfaces"; 
+import { Message } from "../../interfaces";
+import { ADD_MESSAGE } from "../actionTypes";
 
 const initialState: Message[] = [
 	{
@@ -12,11 +13,16 @@ const initialState: Message[] = [
 ]
 
 type Action = {
-	type: string;
+	type: typeof ADD_MESSAGE;
+	message: Message;
 }
 
-const messagesReducer = (state: Message[] = initialState , action: Action) => {
+const messagesReducer = (state: Message[] = initialState, action: Action) => {
 	switch (action.type) {
+
+		case ADD_MESSAGE:
+			return [...state, action.message];
+
 		default:
 			return state;
 	}

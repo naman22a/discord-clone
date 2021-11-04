@@ -16,7 +16,7 @@ const MemberList: React.FC = () => {
 
 			{/* members categories */}
 
-			{membersCategories.map(category => <MembersCategory {...category} />)}
+			{membersCategories.map(category => <MembersCategory {...category} key={category.category} />)}
 		</div>
 	)
 }
