@@ -43,13 +43,15 @@ const Chat: React.FC = () => {
 
     return (
         <div className="bg-gray-700 w-full text-white relative p-3">
-            <div className="overflow-y-scrol h-full">
-                {messages.map(message => (
-                    <Message
-                        {...message}
-                        key={message.date.getTime().toString()}
-                    />
-                ))}
+            <div className='overflow-y-scroll h-full w-full absolute'>
+                <div>
+                    {messages.map(message => (
+                        <Message
+                            {...message}
+                            key={message.date.getTime().toString()}
+                        />
+                    ))}
+                </div>
             </div>
 
             {/* message Box */}
