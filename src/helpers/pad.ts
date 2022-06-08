@@ -1,1 +1,1 @@
-export const pad = (n: number) => ("00" + n).substr(-2);
+export const pad = (n: number) => ('00' + n).substr(-2);

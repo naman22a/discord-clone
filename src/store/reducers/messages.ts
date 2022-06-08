@@ -1,31 +1,30 @@
-import { Message } from "../../interfaces";
-import { ADD_MESSAGE } from "../actionTypes";
+import { Message } from '../../interfaces';
+import { ADD_MESSAGE } from '../actionTypes';
 
 const initialState: Message[] = [
-	{
-		user: {
-			name: 'Naman Arora',
-			online: true
-		},
-		date: new Date(),
-		msg: 'hi'
-	},
-]
+    {
+        user: {
+            name: 'Naman Arora',
+            online: true
+        },
+        date: new Date(),
+        msg: 'hi'
+    }
+];
 
 type Action = {
-	type: typeof ADD_MESSAGE;
-	message: Message;
-}
+    type: typeof ADD_MESSAGE;
+    message: Message;
+};
 
 const messagesReducer = (state: Message[] = initialState, action: Action) => {
-	switch (action.type) {
+    switch (action.type) {
+        case ADD_MESSAGE:
+            return [...state, action.message];
 
-		case ADD_MESSAGE:
-			return [...state, action.message];
-
-		default:
-			return state;
-	}
-}
+        default:
+            return state;
+    }
+};
 
 export default messagesReducer;

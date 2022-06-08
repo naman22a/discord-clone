@@ -8,11 +8,11 @@ import membersCategoriesReducer from './membersCategories';
 import messagesReducer from './messages';
 
 const rootReducer = combineReducers({
-	servers: serversReducer,
-	channel: channelReducer,
-	user: userReducer,
-	membersCategories: membersCategoriesReducer,
-	messages: messagesReducer,
+    servers: serversReducer,
+    channel: channelReducer,
+    user: userReducer,
+    membersCategories: membersCategoriesReducer,
+    messages: messagesReducer
 });
 
 export default rootReducer;
